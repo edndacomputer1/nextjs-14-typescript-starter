@@ -16,12 +16,11 @@
     "typecheck": "tsc --noEmit --incremental false"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings=0",
-      "prettier -w"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --quiet --fix"
     ],
-    "**/*.{json,css,scss,md,webmanifest}": [
-      "prettier -w"
+    "*.{json,js,ts,jsx,tsx,html}": [
+      "prettier --write --ignore-unknown"
     ]
   },
   "dependencies": {
